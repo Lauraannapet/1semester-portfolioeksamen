@@ -1,0 +1,348 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #6c4415;
+}
+
+/********* font ***********/
+.im-fell-dw-pica-regular {
+  font-family: "IM Fell DW Pica", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.im-fell-dw-pica-regular-italic {
+  font-family: "IM Fell DW Pica", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/********* HEADER ***********/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6c4415;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #eed37f; /* gul streg */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 165px;
+}
+
+.logo-container img {
+  height: 77px;
+  width: 68px;
+  border-radius: 50%;
+  border: #eed37f 2px solid;
+}
+
+.logo-container h2 {
+  color: #eed37f;
+  font-size: 41px;
+}
+
+.menu {
+  display: flex;
+  gap: 5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #eed37f;
+  font-size: 1.3rem;
+  border: #b2922d 3px solid;
+  padding: 5px 10px;
+}
+
+.menu a:hover {
+  color: #6c4415;
+  background-color: #eed37f;
+}
+.menu a:hover {
+  border: 3px solid #b2922d;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+body {
+  font-family: "IM Fell DW Pica", serif;
+}
+
+/********* RESPONSIV MENU ***********/
+
+@media screen and (max-width: 800px) {
+  /* Skjul menuen og vis burger-ikonet */
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #6c4415;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    padding: 2rem 0;
+    z-index: 1;
+  }
+  nav.active .menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #6c4415;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    width: 30px;
+    height: 4px;
+    background-color: #eed37f;
+    margin: 6px 0;
+    transition: 0.3s;
+  }
+
+  /* Animation til burger */
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Justering af header og logo */
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .logo-container {
+    padding-right: 0;
+  }
+
+  .logo-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo-container img {
+    height: 55px;
+    width: 50px;
+  }
+}
+
+/********* BODY ***********/
+
+/********* overskrift og linje ***********/
+
+.tema-intro {
+  text-align: center;
+  color: #eed37f;
+  padding: 5rem 14rem;
+  margin-top: 20px;
+}
+.tema-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.tema-intro p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-top: 20px;
+}
+
+.linje {
+  border: none;
+  border-top: 3px solid #eed37f; /* farve på linjen */
+  width: 800px; /* justér længden her */
+  margin: 70px auto;
+  margin-top: 20px;
+}
+
+/********** billede/tekst sektion ***********/
+
+.tema-sektion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tema-tekst {
+  flex: 1;
+  color: #eed37f;
+}
+.tema-tekst h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.tema-tekst p {
+  font-size: 1.6rem;
+  line-height: 1.9;
+  margin-top: 20px;
+}
+.tema-billede {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.tema-billede img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: #b2922d 4px solid;
+}
+
+.tema-sektion.reverse {
+  flex-direction: row-reverse;
+}
+
+.tema-slut {
+  text-align: center;
+  color: #eed37f;
+  padding: 5rem 14rem;
+  margin-top: -55px;
+}
+.tema-slut h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.tema-slut p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+/********* Hover link***********/
+
+.tema-billede {
+  position: relative; /* gør overlay muligt */
+}
+
+.tema-billede .hover-link {
+  position: relative;
+  display: inline-block;
+}
+
+.tema-billede .hover-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 1);
+  background-color: #6c4415;
+  color: #eed37f;
+  font-weight: 600;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  border: #b2922d 4px solid;
+}
+
+.tema-billede:hover .hover-text,
+.tema-billede .hover-link:focus .hover-text {
+  opacity: 1;
+}
+
+/********* RESPONSIV SIDE ***********/
+
+@media screen and (max-width: 800px) {
+  .tema-sektion {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tema-tekst {
+    text-align: center;
+  }
+  .tema-billede img {
+    max-width: 100%;
+    height: auto;
+  }
+  .tema-intro {
+    padding: 2rem;
+  }
+  .tema-intro h2 {
+    font-size: 1.5rem;
+  }
+  .tema-intro p {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+  .linje {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .tema-sektion,
+  .tema-sektion.reverse {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+  .tema-slut {
+    padding: 3rem;
+    margin-top: 2rem;
+  }
+  .tema-slut h2 {
+    font-size: 1.5rem;
+  }
+  .tema-slut p {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+}
+
+/********* FOOTER ***********/
+footer {
+  background-color: #eed37f; /* eller din tema-farve */
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 4px solid #b2922d;
+  color: #6c4415;
+  margin-top: 130px;
+}
+
+footer a {
+  color: #6c4415;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
